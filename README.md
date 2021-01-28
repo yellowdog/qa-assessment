@@ -1,3 +1,6 @@
+## Instructions
+
+You'll find the full instructions in the PDF within this repository.
 
 ## Run
 
