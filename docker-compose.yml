@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  mongodb:
+    image: mongo:4.2.12
+    container_name: mongodb
+    hostname: mongodb
+    ports: ["27017:27017"]
+  contacts:
+    image: yellowdogco/contacts:1.0.0-SNAPSHOT
+    depends_on:
+      - mongodb
+    container_name: contacts
+    hostname: contacts
+    environment:
+      - spring.data.mongodb.host=mongodb
+    ports: ["8080:8080"]
